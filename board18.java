@@ -1,4 +1,4 @@
-public class board18//cube no. condition not satisfied
+public class board18
 {
     public static void main(int n)
     {
