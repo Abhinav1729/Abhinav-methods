@@ -8,7 +8,7 @@ public class mathclasstest
     double abs;
     double rou;
     double sqrt;
-    double h;
+    double cbrt;
     double i;
     double j;
     void init()
@@ -66,6 +66,18 @@ public class mathclasstest
         sqrt=sqrt2;
         return sqrt;
     }
+    double cuberoot1()
+    {
+        double cbrt1=Math.cbrt(n1);
+        cbrt=cbrt1;
+        return cbrt;
+    }
+    double cuberoot2()
+    {
+        double cbrt2=Math.cbrt(n2);
+        cbrt=cbrt2;
+        return cbrt;
+    }
     public static void main()
     {
         mathclasstest obj=new mathclasstest();
@@ -86,5 +98,9 @@ public class mathclasstest
         System.out.println("The square root of n1 is "+sqrrt1);
         double sqrrt2=obj.squareroot2();
         System.out.println("The square root of n2 is "+sqrrt2);
+        double cbrrt1=obj.cuberoot1();
+        System.out.println("The cube root of n1 is "+cbrrt1);
+        double cbrrt2=obj.cuberoot2();
+        System.out.println("The cube root of n2 is "+cbrrt2);
     }
 }
