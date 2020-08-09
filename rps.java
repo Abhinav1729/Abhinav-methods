@@ -34,16 +34,20 @@ public class rps
     {
         rps obj=new rps();
         String c1=obj.input();
-        String c2=obj.input();
-        String c3=obj.input();
-        String c4=obj.input();
-        String c5=obj.input();
         String d1=obj.compran();
+        System.out.println("Computer's choice:"+d1);
+        String c2=obj.input();
         String d2=obj.compran();
+        System.out.println("Computer's choice:"+d2);
+        String c3=obj.input();
         String d3=obj.compran();
+        System.out.println("Computer's choice:"+d3);
+        String c4=obj.input();
         String d4=obj.compran();
+        System.out.println("Computer's choice:"+d4);
+        String c5=obj.input();
         String d5=obj.compran();
-        System.out.println("The computer's choices are,"+"\n"+d1+"\n"+d2+"\n"+d3+"\n"+d4+"\n"+d5);
+        System.out.println("Computer's choice:"+d5);
         String a1="Rock";
         String a2="Scissors";
         String a3="Paper";
