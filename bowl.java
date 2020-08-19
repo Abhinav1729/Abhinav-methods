@@ -14,8 +14,6 @@ public class bowl
         count++;
         return num;
     }
-    //create another method with probablity thingy calculation call it first the call scanner method 
-    //and then check whether they are equal and out and then put both of them in for loop
     int calc()
     {
         double y=Math.random()*100;

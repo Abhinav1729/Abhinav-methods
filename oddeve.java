@@ -1,5 +1,3 @@
-/*make scanner class in which you accept runs and then put in for loop in main method and call it multiple times with condition.
-put count++ in scanner class starting from 0 and put condition in  for loop as i<=count*/
 import java.util.Scanner;
 public class oddeve
 {
@@ -16,8 +14,6 @@ public class oddeve
         count++;
         return num;
     }
-    //create another method with probablity thingy calculation call it first the call scanner method 
-    //and then check whether they are equal and out and then put both of them in for loop
     int calc()
     {
         double y=Math.random()*100;
