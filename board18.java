@@ -1,63 +1,68 @@
-public class board18
+import java.util.Scanner;
+class board18
 {
-    public static void main(int n)
+    int n;
+    void input()
     {
-        int t1=n;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number");
+        n=sc.nextInt();
+        sc.close();
+    }
+    int primesumcalc()
+    {
         int sum=0;
-        int t2=n;
-        for(int i=2;i<=t2-1;i++)
+        int rem;
+        int j;
+        int n1=n;
+        for(int i=2;i<=n-1;i++)
         {
-            if(t1%i==0)
+            int count=0;
+            while(n1%i==0)
             {
-                int j=i;
-                int k=i;
+                j=i;
                 while(j!=0)
                 {
-                    int dig=j%10;
-                    sum+=dig;
+                    rem=j%10;
+                    sum+=rem;
                     j/=10;
                 }
-                t1/=k;
-                int t3=t1;
-                if(t1%k==0)
-                {
-                    while(t3%k==0)
-                    {
-                        t3/=k;
-                        int len=0;
-                        int m=i;
-                        int o=i;
-                        while(m!=0)
-                        {
-                            m/=10;
-                            len+=1;
-                        }
-                        for(int p=1;p<=len;p++)
-                        {
-                            int rem=o%10;
-                            sum+=rem;
-                            o/=10;
-                        }
-                        t1/=k;
-                    }
-                }
+                n1/=i;
+                count++;
+            }
+            if(count>0)
+            {
+                n1=n/(i*count);
             }
         }
-        int t4=n;
-        int digsum=0;
-        while(t4!=0)
+        return sum;
+    }
+    int sumcalc()
+    {
+        int sum=0;
+        int n1=n;
+        int rem;
+        while(n1!=0)
         {
-            int remdig=t4%10;
-            digsum+=remdig;
-            t4/=10;
+            rem=n1%10;
+            sum+=rem;
+            n1/=10;
         }
-        if(sum==digsum)
+        return sum;
+    }
+    public static void main()
+    {
+        board18 obj=new board18();
+        obj.input();
+        int prsum=obj.primesumcalc();
+        int disum=obj.sumcalc();
+        if(prsum==disum)
         {
             System.out.println("Smith number");
         }
         else
         {
-            System.out.println("not a Smith number");
+            System.out.println("Not a Smith number");
         }
     }
 }
